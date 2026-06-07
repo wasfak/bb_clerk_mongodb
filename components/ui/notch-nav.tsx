@@ -7,6 +7,7 @@ import { Clock3, Home, LayoutDashboard, TrendingUpDown, ClipboardList, Truck } f
 
 import type { LucideIcon } from "lucide-react";
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import { ThemeToggle } from "./theme";
 
 type IconName = "home" | "dashboard" | "history" | "tarsed" | "moves";
 
@@ -282,6 +283,7 @@ export function NotchNav({
             <Show when="signed-in">
               <UserButton />
             </Show>
+            <ThemeToggle />
       </div>
     </header>
   );
